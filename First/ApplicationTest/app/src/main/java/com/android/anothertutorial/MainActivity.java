@@ -28,4 +28,10 @@ public class MainActivity extends AppCompatActivity {
         };
         timer.start();
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }
