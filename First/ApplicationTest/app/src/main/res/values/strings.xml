@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Application Test</string>
+    <string name="the_counter_is_0">The Counter is 0</string>
+    <string name="add_1">Add 1</string>
+    <string name="sub_1">Sub 1</string>
+    <string name="loading">Loading</string>
+</resources>
