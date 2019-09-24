@@ -8,6 +8,14 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/etId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Id"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,4 +63,20 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="2dp"
         android:text="@string/addcc" />
+
+    <Button
+        android:id="@+id/btnShowData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/show_all" />
+
+    <Button
+        android:id="@+id/btnUpdateData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update" />
 </LinearLayout>
