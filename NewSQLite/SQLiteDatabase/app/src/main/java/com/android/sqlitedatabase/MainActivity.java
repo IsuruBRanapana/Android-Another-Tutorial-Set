@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper dbHelper;
     EditText etName,etSurname,etMarks,etId;
-    Button btnAddData,btnShowData,btnUpdateData;
+    Button btnAddData,btnShowData,btnUpdateData,btnDeleteData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +29,26 @@ public class MainActivity extends AppCompatActivity {
         btnAddData=(Button) findViewById(R.id.btnAddData);
         btnShowData=(Button) findViewById(R.id.btnShowData);
         btnUpdateData=(Button) findViewById(R.id.btnUpdateData);
+        btnDeleteData=(Button) findViewById(R.id.btnDeleteData);
         AddData();
         ShowData();
         UpdateData();
+        DeleteData();
     }
+
+    private void DeleteData() {
+        btnDeleteData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer deleteRows=dbHelper.deleteData(etId.getText().toString());
+                if (deleteRows>0){
+                    Toast.makeText(MainActivity.this,"Data is deleted",Toast.LENGTH_SHORT).show();
+                }else
+                    Toast.makeText(MainActivity.this,"No data deleted",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     public void UpdateData(){
         btnUpdateData.setOnClickListener(new View.OnClickListener() {
             @Override
